@@ -3,14 +3,12 @@ import java.util.Scanner;
 public class Game {
     public static void main(String[] args) {
 
-        // 味方1の情報
         int mikata1Hp = 150;
         int mikata1Mp = 15;
         int mikata1Atk = 20;
         int mikata1Def = 10;
         int mikata1Speed = 5;
 
-        // 味方2の情報
         int mikata2Hp = 100;
         int mikata2Mp = 20;
         int mikata2Atk = 5;
@@ -24,20 +22,18 @@ public class Game {
         int mikata3Speed = 80;
 
         int enemy1Hp = 200;
-        int enemy2Hp = 250;
-
         int enemy1Mp = 200;
-        int enemy2Mp = 250;
-
         int enemy1Atk = 200;
-        int enemy2Atk = 250;
-
         int enemy1Def = 200;
-        int enemy2Def = 250;
-
         int enemy1Speed = 200;
+        
+        int enemy2Hp = 250;
+        int enemy2Mp = 250;
+        int enemy2Atk = 250;
+        int enemy2Def = 250;
         int enemy2Speed = 250;
 
+    
         Scanner sc = new Scanner();
         int target = 0;
 
