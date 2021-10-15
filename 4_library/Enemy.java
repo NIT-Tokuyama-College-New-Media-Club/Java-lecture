@@ -27,9 +27,12 @@ public class Enemy {
 
     void attack(Mikata mikata) {
         int damage = this.atk - mikata.def;
-        System.out.println(
-            this.name + "は" + mikata.name + "に" + damage + "ダメージを与えた"
-        );
+
+        System.out.println("--------------------");
+        System.out.print(this.name + "は" + mikata.name + "に");
+        ColorPrint.redPrintf("%d", damage);
+        System.out.println("のダメージを与えた");
+
         if (damage <= 0) {
             damage = 0;
         }
@@ -39,5 +42,6 @@ public class Enemy {
             mikata.hp = 0;
         }
         System.out.println(mikata.name + "のHPは残り" + mikata.hp);
+        System.out.println("--------------------");
     }
 }

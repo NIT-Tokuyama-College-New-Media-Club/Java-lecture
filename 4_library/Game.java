@@ -31,8 +31,12 @@ public class Game {
 
                 target = sc.nextInt();
                 switch (target) {
-                case 1: m1.attack(e1);
-                case 2: m1.attack(e2);
+                case 1: 
+                    m1.attack(e1);
+                    break;
+                case 2:
+                    m1.attack(e2);
+                    break;
                 }
                 break;
             case COMMAND_SPECIAL_ATTACK:
