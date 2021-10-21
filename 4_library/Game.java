@@ -13,12 +13,11 @@ public class Game {
         printStatus(m1, m2, m3, e1, e2);
 
         Scanner sc = new Scanner(System.in);
-        
+
         int cmd = -1;
         while (true) {
             printCommand();
             cmd = sc.nextInt();
-            
             if (cmd == COMMAND_QUIT) {
                 break;
             } else if (cmd == COMMAND_ATTACK) {
