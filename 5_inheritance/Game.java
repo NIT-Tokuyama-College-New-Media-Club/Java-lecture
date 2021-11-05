@@ -7,26 +7,33 @@ public class Game {
     public static void main(String[] args) {
         clearTerminal();
 
-        Mikata m1 = new Mikata("KNIGHT", 100, 100, 10, 15, 12);
+        Mikata m1 = new Mikata("KNIGHT", 100, 100, 100, 15, 12);
         Mikata m2 = new Mikata("WIZARD",  85, 35,  5, 15, 20);
-        Mikata m3 = new Mikata("TANK",   240,  0, 20, 40, 5);
+        Mikata m3 = new Mikata("TANK",   0,  100, 20, 40, 5);
         Enemy e1 = new Enemy("ENEMY1",  400, 30, 10, 0, 15);
         Enemy e2 = new Enemy("ENEMY2", 1200,  0, 50, 5, 1);
-        printStatus(m1, m2, m3, e1, e2);
-
+        
         Scanner sc = new Scanner(System.in);
         
         int cmd = -1;
         while (true) {
+            printStatus(m1, m2, m3, e1, e2);
             printCommand();
             cmd = sc.nextInt();
-            clearTerminal();
+            
             if (cmd == COMMAND_QUIT) {
                 break;
+                
             } else if (cmd == COMMAND_ATTACK) {
                 m1.attack(e1);
                 printStatus(m1, m2, m3, e1, e2);
             }
+
+            // 何か押されるまで待機
+            sc.nextLine();
+            sc.nextLine();
+
+            clearTerminal();
         }
 
         sc.close();

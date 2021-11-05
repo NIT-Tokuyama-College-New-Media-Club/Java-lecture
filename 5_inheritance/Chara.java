@@ -1,16 +1,16 @@
 public class Chara {
+    
     String name;
 
     int hp;
-    int maxHp;
-
     int mp;
-    int maxMp;
-
     int atk;
     int def;
     int speed;
-
+    
+    int maxHp;
+    int maxMp;
+    
     Chara(String name, int hp, int mp, int atk, int def, int speed) {
         this.name  = name;
         
@@ -26,7 +26,13 @@ public class Chara {
 
     void printStatus() {
         System.out.printf("%7s ", this.name);
-        System.out.printf("HP : %4d / %4d, ", this.hp, this.maxHp);
+
+        if (this.hp <= 0) {
+            ColorPrint.redPrintf("HP : %4d / %4d, ", this.hp, this.maxHp);
+        } else {
+            System.out.printf("HP : %4d / %4d, ", this.hp, this.maxHp);
+        }
+
         System.out.printf("MP : %4d / %4d, ", this.mp, this.maxMp);
         System.out.printf("ATK : %4d, ", this.atk);
         System.out.printf("DEF : %4d, ", this.def);
