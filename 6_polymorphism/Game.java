@@ -54,6 +54,8 @@ public class Game {
     static Chara selectTarget(Chara[] charas) {
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("--------------------");
+        System.out.println("誰に攻撃しますか？");
         for (int i = 0; i < charas.length; i++) {
             System.out.printf("%2d : %s\n", i, charas[i].name);
         }
